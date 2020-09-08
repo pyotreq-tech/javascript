@@ -1,0 +1,15 @@
+img {
+    width: 100px;
+    float: left;
+}
+
+svg {
+    width: 100px;
+    float: right;
+}
+
+.container {
+    width: 80vw;
+    height: 20px;
+    margin: 0 auto;
+}

@@ -1,10 +1,10 @@
-img {
+#logo {
     width: 100px;
     float: left;
 }
 
-svg {
-    width: 100px;
+#menu {
+    width: 20px;
     float: right;
 }
 

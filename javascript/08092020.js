@@ -23,7 +23,7 @@ function logType(arg) {
         console.log("array!");
     } else if (typeof arg === "object") {
         console.log("object!");
-    } else if (typeof arg === "symbol") {
+    } else {
         console.log("I have no idea!");
     }
 }

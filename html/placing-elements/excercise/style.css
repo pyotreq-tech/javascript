@@ -1,3 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    width: 100%;
+}
+
+span {
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    font
+}
+.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+
 #logo {
     width: 100px;
     float: left;
@@ -8,8 +29,59 @@
     float: right;
 }
 
-.container {
-    width: 80vw;
-    height: 20px;
-    margin: 0 auto;
+#one {
+    width: 100%;
+    height: 30px;
+}
+
+#two {
+    width: 100%;
+    background-image: url("assets/spices.jpg");
+    height: 35vw;
+    background-size: cover;
+
+    position: relative;
+}
+
+#three {
+    width: 100%;
+    background-color: grey;
+    height: 100%;
+    display: inline-block;
+}
+
+.bottom {
+    display: inline-block;
+    width: 49%;
+    padding-left: 75px;
+
+
+}
+
+button {
+    display: block;
+    position: relative;
+    left: 45%;
+    top: 50%;
+    color:  orange;
+    background-color: yellow;
+    border-radius: 15px;
+    border: orange 4px solid;
+}
+
+h1 {
+    font-size: 1.5em;
+    displa: inline-block
+    
+}
+
+img {
+    width: 10%;
+    display: inline-block;
+}
+
+.sub {
+    width: 49%;
+    border: 1px solid black;
+    display: inline-block;
 }

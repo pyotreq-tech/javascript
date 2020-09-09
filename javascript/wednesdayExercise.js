@@ -4,7 +4,7 @@ function sum() {
     for (var i = 1; i < arguments.length; i++) {
         sum += arguments[i];
     }
-    console.log(sum);
+    return sum;
 }
 
 sum(10, 20, 40, 30);
@@ -28,7 +28,7 @@ function check(num) {
         return "ERROR";
     } else if (num >= 1000000) {
         console.log(num);
-        //does console.log but return undefined when num is between 0 and 999999?
+        //does console.log but return undefined when num is between 1 and 999999?
         return num;
     } else {
         check(num * 10);
@@ -36,3 +36,18 @@ function check(num) {
 }
 
 check(10);
+
+//4
+
+function getTotaler() {
+    var sum = 0;
+    return function () {
+        var result = (sum += arguments[0]);
+        return result;
+    };
+}
+
+var totaler = getTotaler();
+totaler(1);
+totaler(3);
+totaler(5);

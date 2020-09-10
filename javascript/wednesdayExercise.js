@@ -27,12 +27,11 @@ function check(num) {
     if (num <= 0 || isNaN(num)) {
         return "ERROR";
     } else if (num >= 1000000) {
-        console.log(num);
-        //does console.log but return undefined when num is between 1 and 999999?
         return num;
     } else {
-        check(num * 10);
+        num = check(num * 10);
     }
+    return num;
 }
 
 check(10);

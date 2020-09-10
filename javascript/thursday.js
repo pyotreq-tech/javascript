@@ -6,6 +6,8 @@ function each(data, func) {
         for (var key in data) {
             func(data[key], key);
         }
+    } else {
+        return "Not an array, neither an object";
     }
 }
 

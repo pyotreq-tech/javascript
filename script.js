@@ -44,3 +44,85 @@
 // }
 
 // countdown(5);
+
+// Shift Alt dwnArrow
+// // ALT arrdown - moves down
+// // Shift Alt dwnArrow
+
+// //SPLICE
+
+// colors = ["orange", "blue", "red", "green", "yellow", "purple"];
+// // var remove = colors.splice(1, 2);
+// // console.log(colors);
+// // console.log(remove);
+
+//we have mutared, changed the Array
+
+// var myColors = colors.slice(1, 4);
+// console.log(myColors);
+
+// var copyOfColors = colors.slice();
+// console.log(copyOfColors);
+
+// var longColors = colors.filter(function (color) {
+//     return color.length > 4;
+// });
+
+// console.log(longColors);
+
+// "pets" in person = checks whether is a property in Object
+
+// person.hasOwnProperty("address");
+
+// DELETE FROM Object
+
+// delete person["Embarassing Stuff"];
+
+// CONSTRUCTOR - function which ALWAYS returns objects
+// name starts with capital letter
+
+// function Person(firstName, surname) {
+//     this.name = firstName;
+//     this.lastName = surname;
+// }
+
+// var ivana = new Person("ivana", "matijevic");
+// var david = new Person("piotr", "majtyka");
+
+// var britneySpears;
+
+// objects created by constructors are instance
+// function that exists inside an object is a method
+
+//prototype is the parent of an object
+//our objects have parents, and they can inherit properties from them
+
+// Person.prototype.sleeps = function () {
+//     console.log("zzzzzz");
+// };
+
+//syntax above - You will not see properties in console.log, however they exists
+
+//this is an object that Dog will return
+
+// function Dog() {
+//     this.cute = true;
+// }
+
+// var terrier = new Dog();
+
+//usually we do anonymous functions in object
+
+//this shows object itself inside which method is inside of "obj"
+// var obj = {
+//     name: "lucy",
+//     breed: "unknown",
+//     cute: true,
+//     barks: function () {
+//         console.log(this.name + " is cute");
+//     },
+// };
+
+// obj.barks();
+
+//ex num 2, no constructors

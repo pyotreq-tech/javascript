@@ -8,80 +8,133 @@ div {
 
 span {
     color: white;
-    font-size: 1.5em;
-    position: absolute;
-    left: 40%;
-    top: 40%;
-    font
-}
-.container {
-    width: 80vw;
-    margin: 0 auto;
+    font-size: 1.8em;
 }
 
 #logo {
-    width: 100px;
+    width: 160px;
     float: left;
 }
 
 #menu {
-    width: 20px;
+    width: 30px;
     float: right;
+    margin-right: 15px;
 }
 
 #one {
     width: 100%;
     height: 30px;
+    margin: 10px;
 }
 
 #two {
     width: 100%;
     background-image: url("assets/spices.jpg");
-    height: 35vw;
+    height: 32vw;
     background-size: cover;
-
+    background-position: center;
     position: relative;
 }
 
 #three {
     width: 100%;
     background-color: grey;
+    padding: 20px 10%;
     height: 100%;
-    display: inline-block;
 }
 
 .bottom {
-    display: inline-block;
     width: 49%;
-    padding-left: 75px;
-
-
+    display: inline-block;
+    padding-bottom: 15px;
+    margin: 0;
+    position: relative;
+    border: 2px black solid;
+    height: 160px;
 }
 
 button {
     display: block;
-    position: relative;
-    left: 45%;
-    top: 50%;
-    color:  orange;
+    color: orange;
     background-color: yellow;
-    border-radius: 15px;
+    border-radius: 25px;
     border: orange 4px solid;
+    margin: 0 auto;
+    font-size: 1.3em;
+    padding: 4px 20px;
 }
 
 h1 {
     font-size: 1.5em;
-    displa: inline-block
-    
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 img {
-    width: 10%;
-    display: inline-block;
+    width: 40px;
 }
 
 .sub {
     width: 49%;
     border: 1px solid black;
     display: inline-block;
+}
+
+#content {
+    text-align: center;
+    position: relative;
+    top: 38%;
+    line-height: 2;
+}
+
+.part1 {
+    width: 20%;
+    display: inline-block;
+    border: 1px red solid;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+}
+
+.part2 {
+    width: 78%;
+    height: 80px;
+    display: inline-block;
+    border: 1px red solid;
+    padding: 0;
+    margin: 0;
+}
+
+.image {
+    float: right;
+    padding-bottom: 15px;
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 734px) {
+    .bottom {
+        width: 100%;
+    }
+
+    #two {
+        width: 100%;
+        height: 100vw;
+    }
+
+    em {
+        display: block;
+        padding: 0 20%;
+    }
+
+    button {
+        padding: 1px 8px;
+        font-size: 0.9em;
+    }
+    span {
+        font-size: 1.6em;
+    }
 }

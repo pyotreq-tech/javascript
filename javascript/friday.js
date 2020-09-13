@@ -1,18 +1,28 @@
 //1
-//STILL IN PROGRESS
-// function Rectangle(width, height) {
-//     this.getArea = function () {
-//         return width * height;
-//     };
-// }
-// var rect = new Rectangle(4, 5);
-// rect.getArea();
+var area = function () {
+    if (arguments.length === 1) {
+        return arguments[0] * arguments[0];
+    } else {
+        return arguments[0] * arguments[1];
+    }
+};
 
-// function Square(num) {}
+function Rectangle(width, height) {
+    this.getArea = function () {
+        return area(width, height);
+    };
+}
+function Square(width) {
+    this.getArea = function () {
+        return area(width);
+    };
+}
 
-// Square.prototype.getArea = Rectangle(this.getArea);
-// var square = new Square(3);
-// square.getArea;
+var square = new Square(4);
+square.getArea();
+
+var rect = new Rectangle(4, 5);
+rect.getArea();
 
 //2
 function invertCase(word) {
@@ -26,6 +36,7 @@ function invertCase(word) {
     }
     return newWord;
 }
+
 //3
 function Countdown(num) {
     this.countdown = function timer(num) {

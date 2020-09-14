@@ -1,20 +1,20 @@
 //1
-var area = function () {
-    if (arguments.length === 1) {
-        return arguments[0] * arguments[0];
-    } else {
-        return arguments[0] * arguments[1];
-    }
+var area = function (width, height) {
+    return width * height;
 };
 
 function Rectangle(width, height) {
+    this.width = width;
+    this.height = height;
     this.getArea = function () {
-        return area(width, height);
+        return area(this.width, this.height);
     };
 }
 function Square(width) {
+    this.width = width;
+    this.height = width;
     this.getArea = function () {
-        return area(width);
+        return area(this.width, this.height);
     };
 }
 

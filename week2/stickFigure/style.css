@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+#one {
+    border: 5px black solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+#two {
+    border-left: 5px black solid;
+    height: 100px;
+}
+
+#three {
+    border-top: 5px black solid;
+    width: 200px;
+    display: inline-block;
+}
+
+#four {
+    border-top: 5px black solid;
+    width: 200px;
+    display: inline-block;
+}
+
+#five {
+    border-left: 5px black solid;
+    height: 150px;
+}
+
+#six {
+    border-top: 5px black solid;
+    width: 200px;
+    display: inline-block;
+}
+
+#seven {
+    border-top: 5px black solid;
+    width: 200px;
+    display: inline-block;
+}

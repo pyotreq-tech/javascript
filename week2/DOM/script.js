@@ -24,4 +24,5 @@ function insert(el) {
     newElement.style.left = "20px";
     newElement.style.top = "100px";
     newElement.style.fontSize = "200px";
+    newElement.style.position = "fixed";
 }

@@ -11,7 +11,11 @@ function selector(type) {
 //2
 function classCheck(name) {
     var result = document.getElementsByClassName(name);
-    return result;
+    var a = [];
+    for (var i = 0; i < result.length; i++) {
+        a.push(result[i]);
+    }
+    return a;
 }
 //3
 

@@ -1,0 +1,15 @@
+.parent {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    margin: 200px auto;
+}
+
+.child {
+    margin: 0 auto;
+    position: relative;
+    top: 75px;
+    height: 50px;
+    width: 50px;
+    background-color: darkseagreen;
+}

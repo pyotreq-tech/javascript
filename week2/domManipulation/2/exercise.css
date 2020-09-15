@@ -1,0 +1,12 @@
+textarea {
+    width: 400px;
+    height: 590px;
+    margin: 30px auto;
+    padding-top: 8px;
+    display: block;
+    background-image: url("background.jpg");
+    background-size: contain;
+    font-family: "Gochi Hand", cursive;
+    font-size: 25px;
+    line-height: 28px;
+}

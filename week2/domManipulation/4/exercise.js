@@ -9,6 +9,7 @@ var randomColor = function () {
 var child = document.querySelector(".child");
 child.addEventListener("click", function (event) {
     event.target.style.backgroundColor = randomColor();
+    event.preventDefault();
 });
 
 var parent = document.querySelector(".parent");

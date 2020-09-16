@@ -104,6 +104,15 @@ img {
     float: right;
 }
 
+.side-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 3px solid black;
+    height: 130vh;
+    width: 300px;
+}
+
 @media screen and (max-width: 734px) {
     .bottom {
         width: 100%;

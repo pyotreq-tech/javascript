@@ -8,10 +8,10 @@ var randomColor = function () {
 
 var div = document.getElementsByTagName("div")[0];
 
-div.addEventListener("mouseenter", function (event) {
+div.addEventListener("mouseup", function (event) {
     event.target.style.backgroundColor = randomColor();
 });
 
-div.addEventListener("mouseleave", function (event) {
+div.addEventListener("mousedown", function (event) {
     event.target.style.backgroundColor = randomColor();
 });

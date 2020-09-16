@@ -50,19 +50,19 @@ function big() {
         clear();
         if (e.keyCode === 38) {
             clear();
-            ctx.drawImage(img, 0 + x, 0 + y);
+            ctx.drawImage(img, x, y);
             y -= speed;
         } else if (e.keyCode === 40) {
             clear();
-            ctx.drawImage(img, 0 + x, 0 + y);
+            ctx.drawImage(img, x, y);
             y += speed;
         } else if (e.keyCode === 37) {
             clear();
-            ctx.drawImage(img, 0 + x, 0 + y);
+            ctx.drawImage(img, x, y);
             x -= speed;
         } else if (e.keyCode === 39) {
             clear();
-            ctx.drawImage(img, 0 + x, 0 + y);
+            ctx.drawImage(img, x, y);
             x += speed;
         } else {
             alert.classList.add("visible");

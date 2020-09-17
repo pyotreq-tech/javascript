@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: crimson;
+    height: 70px;
+}
+
+main {
+    background-color: lightsteelblue;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: moccasin;
+    height: 30px;
+}

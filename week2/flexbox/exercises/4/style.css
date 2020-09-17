@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+}
+
+#first {
+    background-color: mediumspringgreen;
+    justify-content: flex-end;
+}
+
+#first-item {
+    background-color: palevioletred;
+}
+#second {
+    background-color: gold;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#second-item {
+    background-color: chartreuse;
+}
+#third {
+    background-color: lightsteelblue;
+    align-items: flex-end;
+}
+
+#third-item {
+    background-color: crimson;
+}
+#fourth {
+    background-color: darkgreen;
+}
+
+#fourth-item {
+    background-color: slateblue;
+}

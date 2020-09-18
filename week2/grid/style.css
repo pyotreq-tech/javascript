@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    /* We have to do template on a grid container */
+    grid-template-columns: 150px 1fr 150px;
+    /* preferable menu and adverds might have set width */
+    grid-template-rows: 100px 1fr 100px;
+}
+
+header,
+footer {
+    background-color: steelblue;
+}
+
+header {
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-column: 1/4;
+    grid-column: 1 / span 3; */
+    grid-column: 1 / -1;
+}
+
+footer {
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-column: 1/4; */
+    grid-column: 1 / span 3;
+}
+
+.left-sidebar,
+.right-sidebar {
+    background-color: lightsalmon;
+}
+
+main {
+    background-color: peachpuff;
+}

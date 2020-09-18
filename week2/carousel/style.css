@@ -11,17 +11,12 @@ body {
 
 .kitty-container img {
     position: absolute;
-    /* left: 0;
-    top: 0; */
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* It determines how the element fit into container 
-    (usually used for images and videos) */
     transform: translateX(100%);
-
-    /* We do not se transition here, because we do 
-    want transition back to queue immediately */
 }
 
 .kitty-container img.onscreen {
@@ -32,4 +27,24 @@ body {
 .kitty-container img.offscreen-left {
     transform: translateX(-100%);
     transition: transform 3s;
+}
+
+#dots {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 3px white solid;
+    margin: 0 12px;
+}
+
+.on {
+    background-color: white;
 }

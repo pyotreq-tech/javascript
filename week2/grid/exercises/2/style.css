@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    background-color: darkslategray;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 70px 1fr 30px;
+}
+
+header {
+    background-color: seashell;
+}
+
+footer {
+    background-color: navy;
+}

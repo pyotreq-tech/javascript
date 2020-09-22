@@ -1,13 +1,22 @@
 (function (countries) {
     var searchField = $("input");
     var resultsDiv = $(".results");
-    var noHighlight = true;
-    var i = 0;
+    var index = 0;
+    var highlight = false;
 
-    searchField.on("input", function () {
+    //Clean will delete highlight class everytime we selected something with mouse event and then fire key event or vice versa
+    var clean = function () {
+        for (var l = 0; l < $("p").length; l++) {
+            $("p").eq(l).removeClass("highlight");
+        }
+    };
+
+    searchField.on("input", function result() {
         var results = [];
         var htmlForCountries = "";
+        index = 0;
         resultsDiv.show();
+        highlight = false;
         for (var i = 0; i < countries.length; i++) {
             var userInput = searchField.val().toLowerCase();
             if (countries[i].toLowerCase().indexOf(userInput) === 0) {
@@ -30,14 +39,16 @@
             }
             resultsDiv.html(htmlForCountries);
         }
+        return results;
     });
 
     resultsDiv.on("mouseover", "p", function (e) {
+        clean();
         $(e.target).addClass("highlight");
-        noHighlight = false;
+        highlight = true;
         resultsDiv.on("mouseleave", "p", function (e) {
             $(e.target).removeClass("highlight");
-            noHighlight = true;
+            highlight = false;
         });
     });
 
@@ -47,28 +58,57 @@
     });
 
     searchField.on("keydown", function (e) {
-        if (e.keyCode === 40 && noHighlight) {
-            console.log("down arrow");
-            $("p").eq(i).addClass("highlight");
-            noHighlight = false;
-            i++;
+        for (var k = 0; k < $("p").length; k++) {
+            if ($("p").eq(k).hasClass("highlight")) {
+                highlight = true;
+            }
+        }
+        if (e.keyCode === 13) {
+            searchField.val($(".highlight").text());
+            resultsDiv.hide();
+        }
+
+        clean();
+
+        if (e.keyCode === 40 && !highlight) {
+            $("p").eq(index).addClass("highlight");
+            highlight = true;
         } else if (e.keyCode === 40) {
-            console.log("next arrow down");
-            $("p").eq(i).prev().removeClass("highlight");
-            $("p").eq(i).addClass("highlight");
-            i++;
-            console.log(i);
-        } else if (e.keyCode === 38 && noHighlight) {
-            console.log("up arrow");
-            $("p").last().addClass("highlight");
-            noHighlight = false;
-        } else if (e.keyCode === 13) {
-            console.log(e);
+            index++;
+            if (index === $("p").length) {
+                $("p")
+                    .eq($("p").length - 1)
+                    .removeClass("highlight");
+                index = 0;
+            }
+            $("p").eq(index).prev().removeClass("highlight");
+            $("p").eq(index).addClass("highlight");
+        }
+
+        if (e.keyCode === 38 && !highlight) {
+            $("p")
+                .eq($("p").length - 1)
+                .addClass("highlight");
+            highlight = true;
+            index = $("p").length - 1;
+        } else if (e.keyCode === 38) {
+            index--;
+            if (index === -1) {
+                $("p").eq(0).removeClass("highlight");
+                index = $("p").length - 1;
+            }
+            $("p").eq(index).next().removeClass("highlight");
+            $("p").eq(index).addClass("highlight");
         }
     });
 
-    // blur event
-    searchField.on("blur", function () {});
+    searchField.on("focus", function () {
+        resultsDiv.show();
+    });
+
+    searchField.on("blur", function () {
+        resultsDiv.hide();
+    });
 
     //event listener delegation
     // $(".container").on("click", ".country", function () {});
@@ -274,26 +314,3 @@
     "Zambia",
     "Zimbabwe",
 ]);
-
-// // 1. input
-// // take the input and compare it to a list of countries
-// // and decide what to show - if there are 4 match etc.
-
-// // 2. mouseover
-// // think about adding a highlight to the country we are currently hovering over
-
-// // 3. mousedown
-// // take what the user clicked, and set the input field to be that IDBCursorWithValue
-
-// // 4. keydown
-// // this allows the user to scroll through the results
-// // up an ddown arrow keys also the enter key add the value to the input field
-
-// // 5. blur
-// // hide the current list of the results
-
-// // 6. focus - show the current list of results
-
-// // We do not want to see first four countries when we delete back
-
-// // Event delegation - how we can attach events to the items that are not on a page when page loads

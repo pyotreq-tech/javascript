@@ -35,7 +35,8 @@
             resultsDiv.html("");
         } else {
             for (var j = 0; j < results.length; j++) {
-                htmlForCountries += "<p class='country'>" + results[j] + "</p>";
+                htmlForCountries +=
+                    "<p class='country' id='" + j + "'>" + results[j] + "</p>";
             }
             resultsDiv.html(htmlForCountries);
         }
@@ -46,8 +47,11 @@
         clean();
         $(e.target).addClass("highlight");
         highlight = true;
+        index = e.target.id;
+        console.log(index);
         resultsDiv.on("mouseleave", "p", function (e) {
             $(e.target).removeClass("highlight");
+            index = 0;
             highlight = false;
         });
     });

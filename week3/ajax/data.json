@@ -1,0 +1,22 @@
+[
+    {
+        "animal": "cat",
+        "cutenessScore": 1000000
+    },
+    {
+        "animal": "squirrel",
+        "cutenessScore": 1000001
+    },
+    {
+        "animal": "pokemon",
+        "cutenessScore": 10
+    },
+    {
+        "animal": "digimon",
+        "cutenessScore": 20
+    },
+    {
+        "animal": "otter",
+        "cutenessScore": 1
+    }
+]

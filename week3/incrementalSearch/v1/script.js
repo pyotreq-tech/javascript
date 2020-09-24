@@ -29,10 +29,12 @@
         }
 
         if (results.length === 0) {
-            htmlForCountries += "<p>No results</p>";
-            resultsDiv.html(htmlForCountries);
-        } else if (searchField.val() === "") {
-            resultsDiv.html("");
+            if (searchField.val() === "") {
+                resultsDiv.html("");
+            } else {
+                htmlForCountries += "<p>No results</p>";
+                resultsDiv.html(htmlForCountries);
+            }
         } else {
             for (var j = 0; j < results.length; j++) {
                 htmlForCountries +=

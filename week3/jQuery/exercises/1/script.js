@@ -1,11 +1,30 @@
 (function () {
+    // ticker("ticker2", 1);
     ticker("#ticker", -1);
 
-    // ticker("ticker2", 1);
-
     function ticker(id, step) {
-        var ticker = $(id);
+        $.ajax({
+            url: "/data.json",
+            async: false,
+            success: function (response) {
+                var newHtml = "";
+                var content = $("#headlines");
+                content = $("#headlines");
+                for (var i = 0; i < response.length; i++) {
+                    newHtml +=
+                        "<a href='" +
+                        response[i].link +
+                        "'>" +
+                        response[i].value +
+                        "</a>";
+                }
+                console.log(newHtml);
+                content.html(newHtml);
+            },
+        });
+
         var headlines = $("#headlines");
+        var ticker = $(id);
         var links = headlines.find("A");
         var curX = headlines.offset().left;
         var headlinesWidth = headlines.offset().width;

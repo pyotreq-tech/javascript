@@ -17,6 +17,7 @@
         var userInput = searchField.val().toLowerCase();
 
         clearInterval(timer);
+        console.log(timer);
         timer = setTimeout(ajaxRequest, 250);
         console.log(timer);
 

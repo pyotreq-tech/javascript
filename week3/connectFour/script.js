@@ -21,6 +21,24 @@
         }
         diagonalLeft();
         function diagonalLeft() {
+            var sum = col.index() - i;
+            var newArr = [];
+            var newItem;
+            for (var j = 0; j < 7; j++) {
+                var curColIndex = parseInt($(".column").eq(j).index());
+                for (var k = 0; k < 6; k++) {
+                    if (curColIndex - k === sum) {
+                        newItem = $(".column").eq(curColIndex).children().eq(k);
+                        newArr.push(newItem);
+                    }
+                }
+            }
+            // console.log(newArr);
+            return newArr;
+        }
+
+        diagonalRight();
+        function diagonalRight() {
             var sum = col.index() + i;
             var newArr = [];
             var newItem;
@@ -33,7 +51,7 @@
                     }
                 }
             }
-            console.log(newArr);
+            // console.log(newArr);
             return newArr;
         }
 
@@ -48,6 +66,10 @@
             //victory, reset a game, remove classes etc.
         } else if (checkForVictory(slotsInRow)) {
             console.log("row victory");
+        } else if (checkForVictory(diagonalLeft())) {
+            console.log("diagonal left");
+        } else if (checkForVictory(diagonalRight())) {
+            console.log("diagonal right");
         }
         switchPlayer();
 

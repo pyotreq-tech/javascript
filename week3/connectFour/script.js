@@ -19,6 +19,23 @@
         if (i === -1) {
             return;
         }
+        diagonalLeft();
+        function diagonalLeft() {
+            var sum = col.index() + i;
+            var newArr = [];
+            var newItem;
+            for (var j = 0; j < 7; j++) {
+                var curColIndex = parseInt($(".column").eq(j).index());
+                for (var k = 0; k < 6; k++) {
+                    if (curColIndex + k === sum) {
+                        newItem = $(".column").eq(curColIndex).children().eq(k);
+                        newArr.push(newItem);
+                    }
+                }
+            }
+            console.log(newArr);
+            return newArr;
+        }
 
         //to clear the function and console.log all slots
         // var allSlots = $(".slot");
@@ -33,11 +50,17 @@
             console.log("row victory");
         }
         switchPlayer();
+
+        //Checking of the columns and rows coordinates of clicked items
     });
 
-    function checkForDiagonals(allSlots) {
-        return true;
-    }
+    // checkForDiagonals();
+    // function checkForDiagonals(slotsInCol, slotsInRow) {
+    //     for (var i = 0; i < slotsInCol; i++) {
+    //         console.log("Check for diagonals:", slotsInCol);
+    //     }
+    // return true;
+    // }
 
     // Approach number 1
     // var diags = [

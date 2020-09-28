@@ -34,6 +34,7 @@
     function playGame(columns, winningCount) {
         var board = $("#board");
         var currentPlayer = "player1";
+        var victoryCheck = false;
 
         //Event listeners for navigation buttons
 
@@ -43,8 +44,9 @@
                 if (e.keyCode === 13) {
                     $("#setup").hide();
                     // $("body").unbind("keyup");
-                    // $("#player1").addClass("focus-one");
+                    $("#player1").addClass("focus-one");
                     playGame(columns, winningCount);
+                    // $("#player1").addClass("focus-one");
                     $("body").unbind("keyup");
                 }
             });
@@ -59,7 +61,7 @@
                     $("#player1.star").removeClass("victory-winner");
                     $("#player2.star").removeClass("victory-winner");
                     $("body").unbind("keyup");
-                    // $("#player1").addClass("focus-one");
+                    $("#player1").addClass("focus-one");
                     playGame(columns, winningCount);
                 }
             });
@@ -73,6 +75,7 @@
                     $(".setup-message").removeClass("hidden");
                     enterListener();
                     playGame(columns, winningCount);
+                    $("#player1").addClass("focus-one");
                 }
             });
         }
@@ -176,6 +179,44 @@
                 $(e.currentTarget).children().removeClass("on-mouse-enter");
             });
 
+            //Logic while victory is true
+
+            function victory() {
+                //First all buttons are unable to click after winning animation is performed
+
+                $(".column").unbind("click");
+                $("#reset-score-button").unbind("click");
+                $("#settings-score-button").unbind("click");
+
+                //Score is being updated here
+
+                $("#player1").removeClass("focus-one");
+                $("#player2").removeClass("focus-two");
+
+                if (currentPlayer == "player1") {
+                    playerOneScore += 1;
+                    $("#player1.star").addClass("victory-winner");
+                    $("#player1").html(playerOneScore);
+                    console.log(playerOneScore);
+                } else if (currentPlayer == "player2") {
+                    playerTwoScore += 1;
+                    $("#player2").html(playerTwoScore);
+                    $("#player2.star").addClass("victory-winner");
+                }
+
+                victoryCheck = true;
+
+                //After few seconds with animation actual ending screen is appearing
+
+                setTimeout(function () {
+                    $("#setup").show();
+                    $(".message-winner").removeClass("hidden");
+                    $(".setup-message").addClass("hidden");
+                    victoryContinueListener();
+                    victorySettingsListener();
+                }, 3000);
+            }
+
             //Below is the victory check calling for all 4 types of victories
 
             var slotsInRow = $(".row" + i);
@@ -188,8 +229,9 @@
                 victory();
             } else if (checkForVictory(left())) {
                 victory();
+            } else if (victoryCheck === false) {
+                switchPlayer();
             }
-            switchPlayer();
         });
 
         //Setup for nav Reset score menu
@@ -216,39 +258,16 @@
             });
         });
 
-        //Logic while victory is true
+        //switchPlayer function
 
-        function victory() {
-            //First all buttons are unable to click after winning animation is performed
-
-            // $("#player1").removeClass("focus-one");
-            // $("#player2").removeClass("focus-two");
-            $(".column").unbind("click");
-            $("#reset-score-button").unbind("click");
-            $("#settings-score-button").unbind("click");
-
-            //Score is being updated here
-
-            if (currentPlayer == "player1") {
-                playerOneScore += 1;
-                $("#player1.star").addClass("victory-winner");
-                $("#player1").html(playerOneScore);
-                console.log(playerOneScore);
-            } else if (currentPlayer == "player2") {
-                playerTwoScore += 1;
-                $("#player2").html(playerTwoScore);
-                $("#player2.star").addClass("victory-winner");
+        function switchPlayer() {
+            if (currentPlayer === "player1") {
+                currentPlayer = "player2";
+                playerLight();
+            } else {
+                currentPlayer = "player1";
+                playerLight();
             }
-
-            //After few seconds with animation actual ending screen is appearing
-
-            setTimeout(function () {
-                $("#setup").show();
-                $(".message-winner").removeClass("hidden");
-                $(".setup-message").addClass("hidden");
-                victoryContinueListener();
-                victorySettingsListener();
-            }, 3000);
         }
 
         //Victory checked for dynamic generated arrays
@@ -276,27 +295,17 @@
             }
         }
 
-        function switchPlayer() {
+        function playerLight() {
+            // console.log("player1");
             if (currentPlayer === "player1") {
-                currentPlayer = "player2";
-                // playerLight();
+                // console.log(currentPlayer);
+                $("#player2").removeClass("focus-two");
+                $("#player1").addClass("focus-one");
             } else {
-                currentPlayer = "player1";
-                // playerLight();
+                console.log(currentPlayer);
+                $("#player1").removeClass("focus-one");
+                $("#player2").addClass("focus-two");
             }
         }
-
-        // function playerLight() {
-        //     // console.log("player1");
-        //     if (currentPlayer === "player2") {
-        //         // console.log(currentPlayer);
-        //         $("#player1").removeClass("focus-one");
-        //         $("#player2").addClass("focus-two");
-        //     } else {
-        //         console.log(currentPlayer);
-        //         $("#player1").addClass("focus-one");
-        //         $("#player2").removeClass("focus-two");
-        //     }
-        // }
     }
 })();

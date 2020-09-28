@@ -215,13 +215,13 @@ header {
     transition-duration: 0.2s;
 }
 
-/* .focus-one {
+.focus-one {
     animation: blinkingFocusOne 6s infinite;
 }
 
 .focus-two {
     animation: blinkingFocusTwo 6s infinite;
-} */
+}
 
 .hidden {
     display: none;
@@ -269,7 +269,7 @@ header {
     }
 }
 
-/* @keyframes blinkingFocusOne {
+@keyframes blinkingFocusOne {
     25% {
         background-color: #0f784f;
     }
@@ -282,9 +282,9 @@ header {
     100% {
         background-color: #4c1965;
     }
-} */
+}
 
-/* @keyframes blinkingFocusTwo {
+@keyframes blinkingFocusTwo {
     25% {
         background-color: #0f784f;
     }
@@ -297,7 +297,7 @@ header {
     100% {
         background-color: #aeb261;
     }
-} */
+}
 
 /* 
 FIREWORKS: 

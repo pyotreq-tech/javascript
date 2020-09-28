@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Coonnnect 4</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="board-container">
+            <div id="board"></div>
+        </div>
+        <div id="setup">
+            <div class="message">
+                <h1>COLUMNS NUMBER:</h1>
+                <p id="input-columns-p">7</p>
+                <input
+                    id="input-columns"
+                    type="range"
+                    min="7"
+                    max="15"
+                    value="7"
+                    step="1"
+                />
+                <br /><br /><br />
+                <h1>WINNING NUMBER:</h1>
+                <p id="dots-connected-p">4</p>
+                <input
+                    id="dots-connected"
+                    type="range"
+                    min="4"
+                    max="6"
+                    value="4"
+                />
+                <br />
+                <div class="stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
+                <button id="start">START</button>
+            </div>
+        </div>
+        <header>
+            <div class="player1-board player1-overlay">
+                <div class="star" id="player1">0</div>
+                <p class="player-score">PLAYER 1</p>
+            </div>
+
+            <div class="player2-board player2-overlay">
+                <div class="star" id="player2">0</div>
+                <p class="player-score">PLAYER 2</p>
+            </div>
+        </header>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>

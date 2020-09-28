@@ -2,35 +2,25 @@
     var moreButton = $("#more");
     var resultsParagraph = $("#results-paragraph");
     var resultsContainer = $("#results-container");
-
-    //To hide more button and result query paragraph
+    var baseUrl = "https://spicedify.herokuapp.com/spotify";
 
     resultsParagraph.hide();
     moreButton.hide();
 
-    //Sending a request after clicking Search button
-
     $("#submit-btn").on("click", function () {
+        initialRequest(baseUrl);
+    });
+
+    function initialRequest(currentUrl) {
         var userInput = $("input").val();
         var albumOrArtist = $("select").val();
-        var baseUrl = "https://spicedify.herokuapp.com/spotify";
         var myHtml = "";
         var j = 1;
 
-        if (request(baseUrl)) {
-            moreButton.show();
-            moreButton.on("click", function () {
-                console.log("more");
-                request(baseUrl);
-            });
-        } else {
-            console.log("no more no more");
-            moreButton.hide();
-        }
-
-        function request(currentUrl) {
+        ajaxRequest(currentUrl);
+        function ajaxRequest(ajaxUrl) {
             $.ajax({
-                url: currentUrl,
+                url: ajaxUrl,
                 method: "GET",
                 data: {
                     query: userInput,
@@ -73,32 +63,26 @@
                         );
 
                         resultsContainer.html(myHtml);
-                        return true;
 
-                        //checking if the next URL is available
+                        if (nextUrl) {
+                            moreButton.show();
+                            moreButton.on("click", function () {
+                                console.log("more");
+                                ajaxRequest(nextUrl);
+                            });
+                        } else {
+                            console.log("no more no more");
+                            moreButton.hide();
+                        }
+
+                        // checking if the next URL is available
                     } else {
                         resultsParagraph.html("no results for: " + userInput);
                         resultsContainer.html("");
-                        return false;
+                        // return false;
                     }
                 },
             });
         }
-    });
+    }
 })();
-
-// var search = function () {
-//     $.ajax({
-//         url:
-//             "https://spicedify.herokuapp.com/spotify?query=stones&type=artist&offset=80&limit=20",
-//         method: "GET",
-//         data: {
-//             // query: userInput,
-//             // type: albumOrArtist,
-//         },
-//         success: function (res) {
-//             console.log(res);
-//         },
-//     });
-// };
-// search();

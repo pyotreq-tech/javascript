@@ -5,6 +5,7 @@
     var newUrl;
 
     moreButton.hide();
+    resultsParagraph.hide();
 
     $("#submit-btn").on("click", function () {
         var baseUrl = "https://spicedify.herokuapp.com/spotify";
@@ -38,6 +39,7 @@
         });
 
         function resultsHandler(arg) {
+            resultsParagraph.show();
             var myHtml = "";
             if (arg.length > 0) {
                 for (var i = 0; i < arg.length; i++) {
@@ -60,6 +62,7 @@
                 resultsParagraph.html(
                     "Your results for " + userInput + " are:"
                 );
+
                 return myHtml;
             } else {
                 resultsParagraph.html("no results for: " + userInput);

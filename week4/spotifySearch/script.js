@@ -11,14 +11,13 @@
         var userInput = $("input").val();
         var albumOrArtist = $("select").val();
         var myHtml = "";
-        var newUrl = null;
+        var newUrl;
 
-        if (ajaxRequest(baseUrl) !== null) {
-            moreButton.show();
-            moreButton.on("click", function () {
-                ajaxRequest(newUrl);
-            });
-        }
+        ajaxRequest(baseUrl);
+
+        moreButton.on("click", function () {
+            ajaxRequest(newUrl);
+        });
 
         function ajaxRequest(arg) {
             $.ajax({
@@ -65,12 +64,13 @@
 
                         if (!nextUrl) {
                             moreButton.hide();
+                        } else {
+                            moreButton.show();
                         }
                     } else {
                         resultsParagraph.html("no results for: " + userInput);
                         resultsContainer.html("");
                     }
-                    return nextUrl;
                 },
             });
         }

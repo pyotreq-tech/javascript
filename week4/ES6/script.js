@@ -2,7 +2,7 @@
 let arr = [0, 1, 2, 3, 4];
 
 let fn = (el) => {
-    let revArr = arr.reverse();
+    let revArr = [...el].reverse();
     return revArr;
 };
 
@@ -34,13 +34,13 @@ const fn = (city) => {
 fn(myCity);
 
 // // Exercise 4
-let myCity1 = {
+var myCity1 = {
     name: "Berlin",
     country: "Spain",
     population: 4000000,
 };
 
-let myCity2 = {
+var myCity2 = {
     name: "Paris",
     country: "France",
     population: 12000000,

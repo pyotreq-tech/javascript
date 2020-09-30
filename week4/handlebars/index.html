@@ -7,29 +7,28 @@
             href="https://fonts.googleapis.com/css?family=Raleway"
             rel="stylesheet"
         />
-
         <title>Pokemon</title>
     </head>
     <body>
-        <script id="pokemon" type="text/x-handlebard-template"></script>
-        <div class="container">
-            {{#pokemon}}
+        <div class="container"></div>
 
+        <script id="pokemon" type="text/x-handlebars-template">
+            {{#pokemon}}
             <div class="card">
-                <img src="{{image}}" alt="" />
+                <img src={{image}} alt="">
                 <h2>{{name}}</h2>
 
                 <div class="properties type">Type:</div>
                 <div class="values type-values">
                     {{#types}}
-                    <p>{{this}}</p>
+                        <p>{{ this }}</p>
                     {{/types}}
                 </div>
 
                 <div class="properties abilities">Abilities:</div>
                 <div class="values abilities-values">
                     {{#abilities}}
-                    <p>{{this}}</p>
+                        <p>{{ . }}</p>
                     {{/abilities}}
                 </div>
 
@@ -39,7 +38,7 @@
                 </div>
             </div>
             {{/pokemon}}
-        </div>
+        </script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>

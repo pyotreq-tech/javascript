@@ -1,0 +1,1 @@
+Let's write our very second file with javascript Pimento <3

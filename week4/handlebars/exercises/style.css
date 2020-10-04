@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.item {
+    border: 1px black solid;
+    width: 300px;
+}
+
+img {
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content {
+    padding: 10px;
+}

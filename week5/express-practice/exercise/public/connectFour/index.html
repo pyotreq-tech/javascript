@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Connect 4 v.4</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="board-container">
+            <div id="board"></div>
+        </div>
+        <div id="setup">
+            <div class="message setup-message">
+                <h1>COLUMNS NUMBER:</h1>
+                <p id="input-columns-p">7</p>
+                <input
+                    id="input-columns"
+                    type="range"
+                    min="7"
+                    max="15"
+                    value="7"
+                    step="1"
+                />
+                <br /><br /><br />
+                <h1>WINNING NUMBER:</h1>
+                <p id="dots-connected-p">4</p>
+                <input
+                    id="dots-connected"
+                    type="range"
+                    min="4"
+                    max="6"
+                    value="4"
+                />
+                <br />
+                <div class="stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
+                <h1 id="start">PRESS ENTER</h1>
+            </div>
+            <div class="message message-winner hidden">
+                <div class="pyro">
+                    <div class="before"></div>
+                    <div class="after"></div>
+                </div>
+                <h1 id="winner-message-congrats">!!! VICTORY !!!</h1>
+                <br>
+                <p>Continue with current setup:</p>
+                <h1 class="try-again end-button">PRESS ENTER</h1>
+                <br><br>
+                <p>Try with different parameters:</p>
+                <h1 class="settings end-button">PRESS SPACE</h1>
+
+            </div>
+        </div>
+        <header>
+            <div class="player1-board">
+                <div class="star" id="player1">0</div>
+                <h1 class="player-score player2-text">PLAYER 1</h1>
+            </div>
+
+            <div><h1 class="player-score" id="reset-score-button">RESET SCORE</h1></div>
+            <div><h1 class="player-score" id="settings-score-button">SETTINGS</h1></div>
+            </div>
+
+            <div class="player2-board ">
+                <div class="star" id="player2">0</div>
+                <h1 class="player-score player2-text">PLAYER 2</h1>
+            </div>
+        </header>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -5,7 +5,7 @@ const app = express();
 
 const auth = function (req, res, next) {
     const creds = basicAuth(req);
-    if (!creds || creds.name != "piotr3" || creds.pass != "piotr4") {
+    if (!creds || creds.name != "piotr2" || creds.pass != "piotr3") {
         res.setHeader(
             "WWW-Authenticate",
             'Basic realm="Enter your credentials to see this stuff."'
@@ -18,6 +18,7 @@ const auth = function (req, res, next) {
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use("/canvas", auth);
 
 app.get("/cookie", (req, res) => {
     res.sendFile(__dirname + "/cookie.html");
@@ -42,8 +43,6 @@ app.use((req, res, next) => {
         res.redirect("/cookie");
     }
 });
-
-app.get("/canvas", auth);
 
 app.use(express.static("./public"));
 

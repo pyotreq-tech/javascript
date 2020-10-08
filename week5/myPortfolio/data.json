@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Spotify Search",
+        "directory": "spotifySearch"
+    },
+    {
+        "title": "Connect Four",
+        "directory": "connectFour"
+    },
+    {
+        "title": "Kitty Carousel",
+        "directory": "carousel"
+    },
+    {
+        "title": "Canvas",
+        "directory": "canvas"
+    },
+    {
+        "title": "Ticker",
+        "directory": "ticker"
+    },
+    {
+        "title": "Welcome to Spiced",
+        "directory": "navBar"
+    },
+    {
+        "title": "Incremental Search",
+        "directory": "incrementalSearch"
+    },
+    {
+        "title": "Panes",
+        "directory": "panes"
+    }
+]

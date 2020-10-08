@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#small {
+    background-color: slategray;
+}
+
+#big {
+    background-color: forestgreen;
+    position: absolute;
+    left: 0;
+}
+
+.alert {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 45%;
+    background-color: salmon;
+    width: 1200px;
+    text-align: center;
+    color: darkcyan;
+    visibility: hidden;
+    font-size: 2em;
+}
+
+.visible {
+    visibility: visible;
+}

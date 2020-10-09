@@ -1,0 +1,27 @@
+
+{{#if welcome}}
+{{#data}}
+<div class="tile">
+    <a href="/project/{{directory}}">
+        <div>
+            <img class="img" src="{{directory}}/screenshot.jpg" />
+        </div>
+        <div class="caption">
+            {{title}}
+        </div>
+    </a>
+</div>
+{{/data}}
+
+{{else}}
+{{#data}}
+<div class="navbar-item">
+    <a href="/project/{{directory}}">
+        <p class="link-menu">{{title}}</p>
+    </a>
+</div>
+
+{{/data}}
+
+{{/if}}
+

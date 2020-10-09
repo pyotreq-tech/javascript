@@ -1,34 +1,42 @@
 [
     {
         "title": "Spotify Search",
-        "directory": "spotifySearch"
+        "directory": "spotifySearch",
+        "description": "Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used.  "
     },
     {
         "title": "Connect Four",
-        "directory": "connectFour"
+        "directory": "connectFour",
+        "description": "Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used.  "
     },
     {
         "title": "Kitty Carousel",
-        "directory": "carousel"
+        "directory": "carousel",
+        "description": "Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used.  "
     },
     {
         "title": "Canvas",
-        "directory": "canvas"
+        "directory": "canvas",
+        "description": "Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used.  "
     },
     {
         "title": "Ticker",
-        "directory": "ticker"
+        "directory": "ticker",
+        "description": "Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used.  "
     },
     {
         "title": "Welcome to Spiced",
-        "directory": "navBar"
+        "directory": "navBar",
+        "description": "Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used.  "
     },
     {
         "title": "Incremental Search",
-        "directory": "incrementalSearch"
+        "directory": "incrementalSearch",
+        "description": "Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used.  "
     },
     {
         "title": "Panes",
-        "directory": "panes"
+        "directory": "panes",
+        "description": "Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used. Best project ever, literally. Some text to have a look how space will be used.  "
     }
 ]

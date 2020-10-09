@@ -1,0 +1,24 @@
+{{>navbar}}
+
+<div class="left-bar">
+    <h1 class="title">{{selectedProject.title}}</h1>
+    <a href="/{{selectedProject.directory}}">➡️ <br> Link to the project</a>
+    <p class="description">{{selectedProject.description}}</p>
+</div>
+
+<div class="right-bar">
+    <div>
+        <img class="img-big" src="../{{selectedProject.directory}}/screenshot-big.jpg" />
+    </div>
+
+</div>
+
+{{>footer}}
+
+
+
+
+
+
+
+

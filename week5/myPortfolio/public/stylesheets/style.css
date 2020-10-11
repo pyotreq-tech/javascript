@@ -162,13 +162,13 @@ nav {
     display: flex;
     flex-direction: column;
     grid-column: 1 / 4;
-    transform: translateY(-80px);
-    transition: 1s;
+    /* transform: translateY(-80px); */
+    /* transition: 1s; */
 }
 
-nav:hover {
+/* nav:hover {
     transform: translateY(0px);
-}
+} */
 
 .navbar-content {
     width: 100%;
@@ -211,6 +211,7 @@ nav:hover {
 
 .description {
     margin-top: 25px;
+    font-style: italic;
 }
 
 .link-menu {

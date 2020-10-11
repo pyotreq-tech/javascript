@@ -1,5 +1,5 @@
 (function () {
-    // ticker("ticker2", 1);
+    ticker("ticker2", 1);
     ticker("#ticker", -1);
 
     function ticker(id, step) {

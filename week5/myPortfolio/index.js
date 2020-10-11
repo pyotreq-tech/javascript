@@ -19,13 +19,20 @@ app.get("/", (req, res) => {
 app.get("/project/:project", (req, res) => {
     const { project } = req.params;
     const selectedProject = data.find((item) => item.directory === project);
-    console.log(project, selectedProject);
+    // console.log(project, selectedProject);
     if (!selectedProject) {
         res.send("Error 404, page not found");
     } else {
         res.render("project", {
             data,
             selectedProject,
+            helpers: {
+                activeLink(arg) {
+                    if (selectedProject.directory === arg) {
+                        return true;
+                    }
+                },
+            },
         });
     }
 });

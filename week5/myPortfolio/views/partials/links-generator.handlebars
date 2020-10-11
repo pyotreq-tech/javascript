@@ -15,7 +15,13 @@
 
 {{else}}
 {{#data}}
+
+{{#if (activeLink directory)}}
+<div class="navbar-item" style="background-color: blue;">
+{{else}}
 <div class="navbar-item">
+    {{/if}}
+
     <a href="/project/{{directory}}">
         <p class="link-menu">{{title}}</p>
     </a>

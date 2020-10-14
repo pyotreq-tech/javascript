@@ -1,4 +1,5 @@
 (function () {
+    console.log("work");
     Handlebars.templates = Handlebars.templates || {};
 
     var templates = document.querySelectorAll(

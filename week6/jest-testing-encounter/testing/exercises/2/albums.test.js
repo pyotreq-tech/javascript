@@ -15,10 +15,6 @@ test("album names are in alphabetical order", () => {
     });
 
     return getAlbumNames("meat loaf").then((albumNames) => {
-        // expect(albumNames).toEqual(["Aadonna", "Bihanna", "Zapina"]);
-        console.log("names from test: ", albumNames.sort());
-        let test = albumNames.sort();
-        console.log(test);
-        expect(albumNames).toEqual(test);
+        expect(albumNames).toEqual(albumNames.sort());
     });
 });

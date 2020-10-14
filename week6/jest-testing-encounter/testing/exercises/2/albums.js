@@ -6,8 +6,7 @@ exports.getAlbumNames = function (q) {
         for (var i = 0; i < data.albums.items.length; i++) {
             albumNames.push(data.albums.items[i].name);
         }
-        // albumNames.sort();
-        console.log("names from function: ", albumNames);
+        albumNames.sort();
         return albumNames;
     });
 };

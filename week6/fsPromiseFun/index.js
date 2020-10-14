@@ -16,7 +16,7 @@ const logSizes = (path) => {
                     promises.push(logSizes(`${path}/${arg.name}`));
                 }
             });
-            Promise.all(promises).then(() => {
+            return Promise.all(promises).then(() => {
                 resolve("done!");
             });
         });
